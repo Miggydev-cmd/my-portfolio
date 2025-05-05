@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .animate-fadeIn {
+    animation: fadeIn 1s ease-out both;
+  }
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@layer components {
+  /* 🔮 Glowing border utility */
+  .glow-border {
+    @apply relative border-2 border-purple-500 rounded-xl;
+  }
+
+  .glow-border::before {
+    content: '';
+    @apply absolute -inset-1 rounded-xl bg-gradient-to-r from-purple-500 via-pink-500 to-blue-500 blur opacity-30 animate-pulse z-[-1];
+  }
+
+  /* 💫 Animated blob background */
+  .animated-blob {
+    @apply absolute rounded-full blur-[120px] opacity-25 pointer-events-none;
+  }
+
+  /* 🎯 Hover effect for cards or paragraphs */
+  .hover-effect-box {
+    @apply transition duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-purple-500/30;
+  }
+}
