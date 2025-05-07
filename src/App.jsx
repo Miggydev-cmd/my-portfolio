@@ -12,12 +12,11 @@ import Contact from './pages/Contact';
 export default function App() {
   return (
     <div className="relative min-h-screen font-sans bg-gradient-to-br from-black via-[#0f002f] to-[#190040] text-white overflow-hidden scroll-smooth">
-      {/* Decorative Background Blurs */}
+
       <div className="absolute top-[-100px] left-[-80px] w-[300px] h-[300px] bg-purple-600 opacity-20 rounded-full blur-3xl z-0"></div>
       <div className="absolute bottom-[-100px] right-[-80px] w-[300px] h-[300px] bg-blue-700 opacity-20 rounded-full blur-2xl z-0"></div>
       <div className="absolute top-[40%] left-[50%] transform -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-indigo-500 opacity-10 rounded-full blur-[200px] z-0 hidden md:block"></div>
 
-      {/* Main Layout */}
       <div className="relative z-10">
         <Header />
 

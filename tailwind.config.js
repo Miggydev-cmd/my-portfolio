@@ -21,7 +21,7 @@ export default {
         'pulse': 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
         'rocket-float': 'rocketFloat 6s ease-in-out infinite',
         'wave': 'waveAnim 12s linear infinite',
-        'slow-move': 'moveStars 60s linear infinite', // updated to match your request
+        'slow-move': 'moveStars 60s linear infinite',
       },
       keyframes: {
         fadeIn: {

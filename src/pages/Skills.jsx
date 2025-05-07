@@ -18,15 +18,12 @@ export default function Skills() {
       id="skills"
       className="relative min-h-screen px-6 py-20 bg-gradient-to-br from-[#0d001f] via-[#180034] to-black text-white flex items-center justify-center overflow-hidden"
     >
-      {/* 🔮 Background Glow Effects */}
       <div className="absolute w-[300px] h-[300px] bg-purple-700 rounded-full blur-[120px] opacity-20 top-[-100px] left-[-80px] animate-ping-slow"></div>
       <div className="absolute w-[200px] h-[200px] bg-pink-400 rounded-full blur-[100px] opacity-30 top-[30%] right-[5%] animate-pulse"></div>
       <div className="absolute w-[280px] h-[280px] bg-indigo-600 rounded-full blur-[120px] opacity-25 bottom-[10%] left-[10%] animate-float"></div>
 
-      {/* ✨ Parallax Stars */}
       <div className="absolute inset-0 bg-[radial-gradient(white_1px,transparent_1px)] [background-size:20px_20px] opacity-[0.05] animate-stars pointer-events-none z-0"></div>
 
-      {/* 🌟 Sparkles Layer */}
       <div className="absolute inset-0 pointer-events-none z-0">
         {[...Array(25)].map((_, i) => (
           <div
@@ -41,7 +38,6 @@ export default function Skills() {
         ))}
       </div>
 
-      {/* 📦 Content */}
       <div className="max-w-5xl mx-auto space-y-10 relative z-10 animate-fade-in-up">
         <h2 className="text-4xl font-bold text-center text-purple-500 mb-8">
           My <span className="text-pink-500">Skills</span>
@@ -62,7 +58,6 @@ export default function Skills() {
         </div>
       </div>
 
-      {/* 🌌 Custom Animations */}
       <style jsx>{`
         @keyframes stars {
           from {

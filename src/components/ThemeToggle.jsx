@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { Moon, Sun } from 'lucide-react' // Optional if using lucide-react
+import { Moon, Sun } from 'lucide-react'
 
 export default function ThemeToggle() {
   const [theme, setTheme] = useState(() => localStorage.getItem('theme') || 'light')

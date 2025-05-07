@@ -6,7 +6,6 @@ export default function Education() {
       id="education"
       className="min-h-screen px-6 py-20 bg-gradient-to-r from-black via-[#0b0026] to-[#180034] text-white relative overflow-hidden flex items-center justify-center"
     >
-      {/* Animated Background Effects */}
       <div className="absolute top-[-80px] left-[-80px] w-96 h-96 bg-purple-700 rounded-full blur-[120px] opacity-30 animate-ping z-0"></div>
       <div className="absolute bottom-[-60px] right-[-60px] w-80 h-80 bg-pink-500 rounded-full blur-[100px] opacity-20 animate-pulse z-0"></div>
 
