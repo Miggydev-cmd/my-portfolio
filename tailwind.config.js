@@ -20,8 +20,10 @@ export default {
         'bounce-slow': 'bounce 4s infinite',
         'pulse': 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
         'rocket-float': 'rocketFloat 6s ease-in-out infinite',
-        'wave': 'waveAnim 12s linear infinite',
+        'wave': 'waveMotion 10s linear infinite',
+        'wave-slow': 'waveAnim 12s linear infinite',
         'slow-move': 'moveStars 60s linear infinite',
+        'text-glow': 'pulse 2s ease-in-out infinite',
       },
       keyframes: {
         fadeIn: {
@@ -47,6 +49,10 @@ export default {
         rocketFloat: {
           '0%, 100%': { transform: 'translateY(0)' },
           '50%': { transform: 'translateY(-20px)' },
+        },
+        waveMotion: {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(-100%)' },
         },
         waveAnim: {
           '0%': { transform: 'translateX(0)' },

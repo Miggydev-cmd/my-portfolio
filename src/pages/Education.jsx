@@ -1,49 +1,74 @@
 import React from "react";
 
+const educationData = [
+  {
+    title: "PHINMA University of Pangasinan",
+    subtitle: "Bachelor of Science in Computer Engineering",
+    year: "2021 – Present",
+    description:
+      "Currently pursuing a bachelor's degree with focus on electronics, embedded systems, and web development.",
+  },
+  {
+    title: "Bayambang National High School",
+    subtitle: "Senior High School – STEM Track (With Honors)",
+    year: "2019 – 2021",
+    description:
+      "Developed foundational knowledge in science, mathematics, and computing. Graduated with honors.",
+  },
+  {
+    title: "Bayambang National High School",
+    subtitle: "Junior High School (With Honors)",
+    year: "2015 – 2019",
+    description:
+      "Built strong academic fundamentals and received consistent academic recognition.",
+  },
+  {
+    title: "Bayambang Central School",
+    subtitle: "Elementary (Top 10, With Honors)",
+    year: "2009 – 2015",
+    description:
+      "Early education with top performance in academics, communication, and leadership.",
+  },
+];
+
 export default function Education() {
   return (
     <section
       id="education"
-      className="min-h-screen px-6 py-20 bg-gradient-to-r from-black via-[#0b0026] to-[#180034] text-white relative overflow-hidden flex items-center justify-center"
+      className="min-h-screen px-6 py-24 bg-[#0c0c1d] text-white relative overflow-hidden"
     >
-      <div className="absolute top-[-80px] left-[-80px] w-96 h-96 bg-purple-700 rounded-full blur-[120px] opacity-30 animate-ping z-0"></div>
-      <div className="absolute bottom-[-60px] right-[-60px] w-80 h-80 bg-pink-500 rounded-full blur-[100px] opacity-20 animate-pulse z-0"></div>
-
-      <div className="max-w-4xl mx-auto z-10 animate-fade-in-up">
-        <h2 className="text-4xl md:text-5xl font-bold text-center text-purple-400 mb-12 tracking-wide animate-slide-in-left">
-          Education
+      <div className="text-center mb-16">
+        <h2 className="text-4xl md:text-5xl font-bold">
+          My <span className="text-pink-500">Education</span>
         </h2>
+        <div className="w-24 h-1 bg-pink-500 mx-auto mt-2 rounded-full"></div>
+      </div>
 
-        <div className="space-y-8">
-          {[
-            {
-              title: "PHINMA University of Pangasinan",
-              detail: "Bachelor of Science in Computer Engineering",
-              year: "2021 – Present",
-            },
-            {
-              title: "Bayambang National High School",
-              detail: "Senior High School – STEM Track (With Honors)",
-              year: "2019 – 2021",
-            },
-            {
-              title: "Bayambang National High School",
-              detail: "Junior High School (With Honors)",
-              year: "2015 – 2019",
-            },
-            {
-              title: "Bayambang Central School",
-              detail: "Elementary (Top 10, With Honors)",
-              year: "2009 – 2015",
-            },
-          ].map((edu, index) => (
+      <div className="relative max-w-6xl mx-auto">
+        <div className="absolute left-1/2 transform -translate-x-1/2 h-full border-l-2 border-purple-500 z-0"></div>
+
+        <div className="grid gap-16">
+          {educationData.map((edu, index) => (
             <div
               key={index}
-              className="bg-white/5 backdrop-blur-sm border-l-4 border-purple-500 pl-6 py-4 px-4 rounded-lg shadow-lg transition transform hover:scale-[1.02] hover:shadow-purple-500/30"
+              className={`relative flex items-center w-full ${
+                index % 2 === 0 ? "justify-start" : "justify-end"
+              }`}
             >
-              <h3 className="text-xl md:text-2xl font-semibold">{edu.title}</h3>
-              <p className="text-white/70">{edu.detail}</p>
-              <p className="text-white/50 text-sm mt-1">{edu.year}</p>
+              <div
+                className={`w-full md:w-1/2 p-6 rounded-xl bg-[#1e1e2b] border border-white/10 shadow-lg z-10 ${
+                  index % 2 === 0 ? "mr-auto" : "ml-auto"
+                }`}
+              >
+                <h3 className="text-lg font-bold text-white">
+                  {edu.title}
+                </h3>
+                <p className="text-sm text-purple-400">{edu.subtitle}</p>
+                <p className="text-xs text-white/50 mb-2">{edu.year}</p>
+                <p className="text-sm text-white/80">{edu.description}</p>
+              </div>
+
+              <div className="absolute left-1/2 transform -translate-x-1/2 w-5 h-5 bg-purple-500 border-4 border-[#0c0c1d] rounded-full z-20"></div>
             </div>
           ))}
         </div>
