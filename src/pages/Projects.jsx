@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { FaGithub } from "react-icons/fa";
 
+const API_BASE = "http://127.0.0.1:8000";
+
 export default function Projects() {
   const [projects, setProjects] = useState([]);
 
   useEffect(() => {
-    fetch("http://127.0.0.1:8000/api/projects/")
+    fetch(`${API_BASE}/api/projects/`)
       .then((res) => res.json())
       .then((data) => setProjects(data))
       .catch(() => {
@@ -15,9 +17,9 @@ export default function Projects() {
             description:
               "Thesis project that uses YOLOv8 and LSTM to translate Filipino sign language into text and speech.",
             image: "/images/projects/signspeak.png",
-            tech: ["YOLOv8", "LSTM", "React"],
+            tech: ["YOLOv8s", "LSTM", "React", "MediaPipe", "Pytorch", "OpenCV"],
             demoAvailable: false,
-            code: "https://github.com/yourusername/signspeak",
+            code: "https://github.com/Miggydev-cmd/signspeak-ui.git",
           },
           {
             title: "Quizshow Buzzer w/ Four Buttons",
@@ -63,15 +65,17 @@ export default function Projects() {
             key={index}
             className="rounded-3xl overflow-hidden shadow-xl bg-gradient-to-b from-[#3f3f3f]/20 to-[#1a1a1a]/50 border border-white/10 hover:shadow-pink-500/20 transition duration-300"
           >
-            <div
-              className={`h-32 bg-gradient-to-r ${
-                index === 0
-                  ? "from-indigo-500 to-blue-500"
-                  : index === 1
-                  ? "from-pink-500 to-purple-500"
-                  : "from-green-400 to-teal-400"
-              }`}
-            ></div>
+            {proj.image && (
+              <img
+                src={
+                  proj.image.startsWith("http")
+                    ? proj.image
+                    : `${API_BASE}${proj.image}`
+                }
+                alt={proj.title}
+                className="h-48 w-full object-cover"
+              />
+            )}
 
             <div className="p-6 space-y-4">
               <h3 className="text-lg font-bold">{proj.title}</h3>

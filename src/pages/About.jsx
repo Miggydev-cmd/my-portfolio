@@ -10,26 +10,24 @@ export default function About() {
       className="relative min-h-screen px-6 md:px-20 py-32 bg-[#0c0c1d] text-white flex items-center justify-center overflow-hidden"
     >
       <div className="max-w-6xl w-full grid grid-cols-1 md:grid-cols-2 items-center gap-12 z-10">
-        {/* Avatar */}
+
         <div className="flex justify-center">
           <div className="relative w-[280px] h-[280px] md:w-[320px] md:h-[320px]">
             <div className="absolute inset-0 rounded-full bg-gradient-to-br from-indigo-600 via-purple-700 to-blue-600 blur-3xl opacity-30 animate-pulse z-0"></div>
             <img
-              src="/profile.png"
-              alt="Profile"
+              src="/profile2.png"
+              alt="Profile2"
               className="relative z-10 rounded-full w-full h-full object-cover shadow-lg border-4 border-[#1e1e2f]"
             />
           </div>
         </div>
 
-        {/* About Content */}
         <div className="space-y-6 text-white">
           <h2 className="text-4xl md:text-5xl font-bold leading-tight">
             About <span className="text-blue-400">Me</span>
           </h2>
           <hr className="w-24 border-blue-400 border-t-4 rounded-full" />
 
-          {/* Updated Description */}
           <p className="text-gray-300 leading-relaxed">
             I’m a passionate web developer and designer currently pursuing a Bachelor of Science in Computer Engineering at PHINMA University of Pangasinan. As a student, I’ve developed a strong enthusiasm for both software and hardware technologies—especially in building responsive websites and crafting hands-on hardware projects that bring ideas to life.
           </p>
@@ -40,7 +38,6 @@ export default function About() {
             Beyond coding, I explore UI/UX design trends and dive into side-projects that allow me to merge creativity with function. I'm driven by a desire to innovate, solve problems, and build digital solutions that are not only useful—but also engaging and accessible.
           </p>
 
-          {/* Grid Info */}
           <div className="grid grid-cols-2 gap-4 text-sm text-white/80 mt-4">
             <div>
               <p><strong className="text-white">Name:</strong><br />Joshua Miguel G. Gutierrez</p>
@@ -52,7 +49,6 @@ export default function About() {
             </div>
           </div>
 
-          {/* Trigger modal */}
           <div className="pt-6">
             <button
               onClick={() => setShowModal(true)}
@@ -65,7 +61,6 @@ export default function About() {
         </div>
       </div>
 
-      {/* Modal */}
       {showModal && (
         <div className="absolute inset-0 bg-black/70 backdrop-blur-sm flex items-center justify-center z-50">
           <div className="bg-[#1c1c2b] rounded-xl p-6 w-[90%] max-w-md text-white shadow-2xl animate-fade-in-up">

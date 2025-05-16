@@ -31,12 +31,10 @@ export default function Header() {
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-        {/* 🔮 Logo */}
         <h1 className="text-3xl font-extrabold bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent animate-text-glow tracking-widest uppercase">
           MiggyDev
         </h1>
 
-        {/* 🖥️ Desktop Nav */}
         <nav className="hidden md:flex space-x-10 text-white text-lg font-medium">
           {navItems.map(({ name, to }) => (
             <Link
@@ -53,7 +51,6 @@ export default function Header() {
           ))}
         </nav>
 
-        {/* 📱 Mobile Toggle */}
         <button
           onClick={() => setMenuOpen(!menuOpen)}
           className="md:hidden text-white text-2xl focus:outline-none"
@@ -62,7 +59,6 @@ export default function Header() {
         </button>
       </div>
 
-      {/* 📱 Mobile Nav */}
       {menuOpen && (
         <div className="md:hidden bg-[#0c0c1d] text-white py-6 px-6 flex flex-col space-y-4 text-center">
           {navItems.map(({ name, to }) => (

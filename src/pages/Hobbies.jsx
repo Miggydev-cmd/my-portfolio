@@ -19,7 +19,7 @@ export default function Hobbies() {
           {
             icon: <FaCamera className="text-4xl text-pink-400" />,
             title: "Photography",
-            desc: "Capturing moments and exploring visual storytelling through my lens.",
+            desc: "Capturing moments and exploring visual storytelling through my phones lens.",
           },
           {
             icon: <FaHiking className="text-4xl text-pink-400" />,
@@ -34,7 +34,7 @@ export default function Hobbies() {
           {
             icon: <FaMusic className="text-4xl text-pink-400" />,
             title: "Music",
-            desc: "Playing guitar and piano in my free time to unwind and relax.",
+            desc: "Listening to music in my free time to unwind and relax.",
           },
         ].map((item, i) => (
           <div
@@ -48,18 +48,17 @@ export default function Hobbies() {
         ))}
       </div>
 
-      {/* What I Do Section */}
       <div className="max-w-5xl mx-auto bg-white/5 backdrop-blur-sm rounded-2xl shadow-md p-8 space-y-6">
         <h3 className="text-xl md:text-2xl font-bold text-center text-white">
           What I Do In My Free Time
         </h3>
         <div className="grid md:grid-cols-2 gap-4 text-sm text-white/80">
           {[
-            "Contributing to open-source projects",
-            "Writing tech articles and tutorials",
-            "Experimenting with new technologies",
-            "Cooking international cuisines",
-            "Attending tech meetups and conferences",
+            "Playing video games (Mobile Legends, League of Legends, Clash of Clans)",
+            "Playing Basketball",
+            "Playing table tennis",
+            "Trying to cook sometimes",
+            "Going on spontaneous road trips",
             "Exploring creative and diverse hobbies",
           ].map((activity, i) => (
             <p key={i} className="flex items-start gap-2">

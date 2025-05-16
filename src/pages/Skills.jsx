@@ -1,24 +1,24 @@
 import React from "react";
 
 const technicalSkills = [
-  { name: "HTML & CSS", level: 95 },
-  { name: "JavaScript", level: 90 },
-  { name: "React", level: 85 },
-  { name: "Node.js", level: 80 },
-  { name: "TypeScript", level: 75 },
+  { name: "HTML & CSS", level: 50 },
+  { name: "JavaScript", level: 30 },
+  { name: "React", level: 75 },
+  { name: "Node.js", level: 50 },
+  { name: "TypeScript", level: 5 },
 ];
 
 const designSkills = [
-  { name: "UI/UX Design", level: 90 },
-  { name: "Figma", level: 85 },
-  { name: "Adobe XD", level: 80 },
-  { name: "Photoshop", level: 75 },
-  { name: "Illustrator", level: 70 },
+  { name: "UI/UX Design", level: 40 },
+  { name: "Figma", level: 30 },
+  { name: "Adobe XD", level: 0 },
+  { name: "Photoshop", level: 40 },
+  { name: "Illustrator", level: 0 },
 ];
 
 const tools = [
-  "Git", "Webpack", "Tailwind CSS", "SASS", "Redux", "GraphQL",
-  "MongoDB", "Firebase", "AWS", "Docker", "Jest", "Cypress"
+  "Git", "Tailwind CSS",
+  "MongoDB", "Firebase", "Django", "Docker"
 ];
 
 export default function Skills() {
@@ -30,7 +30,6 @@ export default function Skills() {
       </div>
 
       <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-16">
-        {/* Technical Skills */}
         <div>
           <h3 className="text-2xl font-bold mb-6 text-white">Technical Skills</h3>
           {technicalSkills.map((skill, i) => (
@@ -49,7 +48,6 @@ export default function Skills() {
           ))}
         </div>
 
-        {/* Design Skills */}
         <div>
           <h3 className="text-2xl font-bold mb-6 text-white">Design Skills</h3>
           {designSkills.map((skill, i) => (
@@ -69,7 +67,6 @@ export default function Skills() {
         </div>
       </div>
 
-      {/* Tools */}
       <div className="mt-20 text-center">
         <h3 className="text-2xl font-bold mb-6 text-white">Tools & Technologies</h3>
         <div className="flex flex-wrap justify-center gap-4">
